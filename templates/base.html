@@ -1,3 +1,6 @@
+{% load static %}
+{% load i18n %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +13,7 @@
     <meta name="author" content="">
     <link rel="icon" href="http://getbootstrap.com/docs/3.3/favicon.ico">
 
+     <title>{% block head_title %}{% trans "daftar" %}{% endblock %}</title>
     <title>Sticky Footer Navbar Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
@@ -20,7 +24,7 @@
 
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/docs/3.3/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
-
+    {% block head_datatables_css %}{% endblock %}
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="http://getbootstrap.com/docs/3.3/assets/js/ie-emulation-modes-warning.js"></script>
